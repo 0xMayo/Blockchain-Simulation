@@ -1,0 +1,5 @@
+Method: GET Url: / Date: 2024-04-29 Time: 15:54:41 Success: undefined - Message: ErrorResponse is not defined
+Method: GET Url: / Date: 2024-04-29 Time: 15:55:27 Success: undefined - Message: ErrorResponse is not defined
+Method: GET Url: / Date: 2024-04-29 Time: 15:59:22 Success: undefined - Message: ErrorResponse is not defined
+Method: GET Url: /api/v1/blockchai Date: 2024-04-29 Time: 16:05:50 Success: undefined - Message: ErrorResponse is not defined
+Method: PUT Url: /api/v1/blockchain Date: 2024-04-29 Time: 16:09:45 Success: undefined - Message: ErrorResponse is not defined

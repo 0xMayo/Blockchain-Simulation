@@ -1,0 +1,26 @@
+{
+  "name": "blockchain-simulation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server",
+    "start": "NODE_ENV=production node server",
+    "debug": "ndb server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "ndb": "^1.1.5",
+    "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "uuid": "^9.0.1"
+  }
+}
