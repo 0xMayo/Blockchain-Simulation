@@ -1,14 +1,11 @@
 import express from 'express';
-import dotenv from 'dotenv';
 import cors from 'cors';
 import blockchainRoutes from './routes/blockchain-routes.js';
 import errorHandler from './middleware/errorHandler.js';
-
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-dotenv.config({ path: './config/.env' });
-
+const PORT = process.argv[2];
 const app = express();
 
 const filename = fileURLToPath(import.meta.url);
@@ -31,9 +28,8 @@ app.all('*', (req, res, next) => {
 // Central error handler
 app.use(errorHandler);
 
-const PORT = process.env.PORT || 3000;
 app.listen(PORT, () =>
   console.log(
-    `Server is running in ${process.env.NODE_ENV} mode on port ${PORT}`
+    `Server is running on port ${PORT}`
   )
 );
