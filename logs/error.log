@@ -25,3 +25,6 @@ Method: POST Url: /api/v1/blockchain/mine Date: 2024-05-08 Time: 14:18:41 Succes
 Method: POST Url: /api/v1/blockchain/mine Date: 2024-05-08 Time: 14:19:16 Success: undefined - Message: blockchain.getLatestBlock is not a function
 Method: POST Url: /api/v1/blockchain/mine Date: 2024-05-08 Time: 14:21:07 Success: undefined - Message: lastBlock is not defined
 Method: POST Url: /api/v1/blockchain/mine Date: 2024-05-08 Time: 14:23:34 Success: undefined - Message: blockchain.getLatestBlock is not a function
+Method: GET Url: /api/v1/blockchai Date: 2024-05-08 Time: 18:17:58 Success: undefined - Message: ErrorResponse is not defined
+Method: GET Url: /api/v1/blockchai Date: 2024-05-08 Time: 18:19:40 Success: undefined - Message: ErrorResponse is not defined
+Method: GET Url: /api/v1/blockchai Date: 2024-05-08 Time: 18:20:38 Success: false - Message: Could not find the resource /api/v1/blockchai
