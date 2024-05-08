@@ -3,9 +3,8 @@ import Block from './Block.js';
 
 export default class Blockchain {
   constructor() {
-    console.log('Blockchain constructor', process.env.DIFFICULTY);
+    console.log('Difficulty level:', process.env.DIFFICULTY);
     this.chain = [];
-    // Skapa vårt genisis block...
     this.createBlock(Date.now(), '0', '0', [], process.env.DIFFICULTY);
   }
 
@@ -16,8 +15,7 @@ export default class Blockchain {
     data,
     difficulty
   ) {
-    
-    // Skapa blocket...
+
     const block = new Block(
       timestamp,
       this.chain.length + 1,

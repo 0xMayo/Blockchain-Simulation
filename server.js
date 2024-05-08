@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import blockchainRoutes from './routes/blockchain-routes.js';
 import errorHandler from './middleware/errorHandler.js';
+import logger from './middleware/logger.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -16,6 +17,9 @@ global.__appdir = dirname;
 // Middlewares
 app.use(express.json());
 app.use(cors());
+
+// Logging all requests
+app.use(logger);
 
 // Routes
 app.use('/api/v1/blockchain', blockchainRoutes);

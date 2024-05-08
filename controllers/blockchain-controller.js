@@ -5,7 +5,7 @@ export const getAllBlocks = (req, res, next) => {
   };
   
   export const createBlock = (req, res, next) => {
-    const lastBlock = blockchain.getLatestBlock();
+    const lastBlock = blockchain.getLastBlock();
     const data = req.body;
     const { nonce, difficulty, timestamp } = blockchain.proofOfWork(
       lastBlock.currentBlockHash,

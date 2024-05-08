@@ -20,3 +20,8 @@ Method: POST Url: /api/v1/blockchain/mine Date: 2024-05-08 Time: 10:18:28 Succes
 Method: POST Url: /api/v1/blockchain/mine Date: 2024-05-08 Time: 10:25:20 Success: undefined - Message: blockchain.getLatestBlock is not a function
 Method: POST Url: /api/v1/blockchain/mine Date: 2024-05-08 Time: 11:20:51 Success: undefined - Message: blockchain.getLatestBlock is not a function
 Method: POST Url: /api/v1/blockchain/mine Date: 2024-05-08 Time: 11:41:18 Success: undefined - Message: Unexpected end of JSON input
+Method: POST Url: /api/v1/blockchain/mine Date: 2024-05-08 Time: 14:14:55 Success: undefined - Message: Unexpected end of JSON input
+Method: POST Url: /api/v1/blockchain/mine Date: 2024-05-08 Time: 14:18:41 Success: undefined - Message: blockchain.getLatestBlock is not a function
+Method: POST Url: /api/v1/blockchain/mine Date: 2024-05-08 Time: 14:19:16 Success: undefined - Message: blockchain.getLatestBlock is not a function
+Method: POST Url: /api/v1/blockchain/mine Date: 2024-05-08 Time: 14:21:07 Success: undefined - Message: lastBlock is not defined
+Method: POST Url: /api/v1/blockchain/mine Date: 2024-05-08 Time: 14:23:34 Success: undefined - Message: blockchain.getLatestBlock is not a function
