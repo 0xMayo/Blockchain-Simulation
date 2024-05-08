@@ -5,9 +5,32 @@ export const getAllBlocks = (req, res, next) => {
   };
   
   export const createBlock = (req, res, next) => {
-    res.status(201).json({ message: 'Creating a new block' });
-  };
+    const lastBlock = blockchain.getLatestBlock();
+    const data = req.body;
+    const { nonce, difficulty, timestamp } = blockchain.proofOfWork(
+      lastBlock.currentBlockHash,
+      data
+    );
+
+    const currentBlockHash = blockchain.hashBlock(
+      timestamp,
+      lastBlock.currentBlockHash,
+      data,
+      nonce,
+      difficulty
+    );
   
+    const block = blockchain.createBlock(
+      timestamp,
+      lastBlock.currentBlockHash,
+      currentBlockHash,
+      data,
+      difficulty
+    );
+    
+    res.status(201).json({ success: true, data: block, message: 'Creating a new block' });
+  };
+
     export const getBlock = (req, res, next) => {
     res.status(200).json({ message: `Fetching block with index: ${req.params.index}` });
   };
