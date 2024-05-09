@@ -1,4 +1,4 @@
-import { createHash } from '../utilities/crypto-library.js';
+import { createHash } from '../utilities/cryptoLibrary.js';
 import Block from './Block.js';
 
 export default class Blockchain {
