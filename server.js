@@ -3,7 +3,7 @@ import cors from 'cors';
 import blockchainRoutes from './routes/blockchain-routes.js';
 import errorHandler from './middleware/errorHandler.js';
 import logger from './middleware/logger.js';
-import ErrorResponse from './utilities/errorResponse.js';
+import ErrorResponse from './utilities/ErrorResponse.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
