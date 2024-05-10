@@ -1,7 +1,15 @@
 import { blockchain } from "../startup.js";
+import blockchainData from "../data/blockchainData.json" with {type:"json"};
+import {v4 as uuidv4} from 'uuid';
+import ResponseModel from "../utilities/ResponseModel.js";
+import ErrorResponse from "../utilities/errorResponse.js";
+import { writeFileSync, writeFileAsync } from "../utilities/fileManager.js";
+
+const folder = 'data';
+const file = 'blockchainData.json';
 
 export const getAllBlocks = (req, res, next) => {
-    res.status(200).json({ success: true, data: blockchain, message: 'Fetching all blocks' });
+  res.status(200).json(new ResponseModel({ statusCode: 200, data: blockchain }));
   };
   
   export const createBlock = (req, res, next) => {
@@ -27,10 +35,22 @@ export const getAllBlocks = (req, res, next) => {
       data,
       difficulty
     );
+
+  
     
-    res.status(201).json({ success: true, data: block, message: 'Creating a new block' });
+    res.status(201).json(new ResponseModel({ statusCode: 201, data: block }));
   };
 
     export const getBlock = (req, res, next) => {
-    res.status(200).json({ message: `Fetching block with index: ${req.params.index}` });
+    res.status(200).json({ message: `Fetching block with id: ${req.params.id}` });
   };
+
+  // writeFileAsync(folder, file, JSON.stringify(blockchain.chain));
+
+  // writeFileAsync(folder, file, JSON.stringify(blockchain.chain))
+  // .then(() => {
+  //   res.status(201).json(new ResponseModel({ statusCode: 201, data: block }));
+  // })
+  // .catch(error => {
+  //   res.status(500).json(new ResponseModel({ statusCode: 500, error: error.toString() }));
+  // });

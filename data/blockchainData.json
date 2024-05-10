@@ -1,0 +1,18 @@
+[
+  {
+    "timestamp": 1715336979351,
+    "blockIndex": 1,
+    "previousBlockHash": "0",
+    "currentBlockHash": "0",
+    "data": [],
+    "difficulty": "2"
+  },
+  {
+    "timestamp": 1715336991235,
+    "blockIndex": 2,
+    "previousBlockHash": "0",
+    "currentBlockHash": "000739898c3e240d11d07dbdb09f1361f9c5d2ac93a4223b27369097aa31baff",
+    "data": {},
+    "difficulty": 3
+  }
+]

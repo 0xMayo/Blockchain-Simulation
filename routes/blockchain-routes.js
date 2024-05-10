@@ -5,6 +5,6 @@ export const router = express.Router();
 
 router.route('/').get(getAllBlocks);
 router.route('/mine').post(createBlock);
-router.route('/:index').get(getBlock);
+router.route('/:id').get(getBlock);
 
 export default router;
