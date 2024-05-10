@@ -1,10 +1,11 @@
 import express from 'express';
-import { getAllBlocks, getBlock, createBlock } from '../controllers/blockchain-controller.js';
+import { getAllBlocks, createBlock, synchronizeChain, broadcast  } from '../controllers/blockchain-controller.js';
 
 export const router = express.Router();
 
 router.route('/').get(getAllBlocks);
 router.route('/mine').post(createBlock);
-router.route('/:id').get(getBlock);
+router.route('/concensus').get(synchronizeChain);
+router.route('/block/broadcast').post(broadcast);
 
 export default router;

@@ -28,3 +28,15 @@ Method: POST Url: /api/v1/blockchain/mine Date: 2024-05-08 Time: 14:23:34 Succes
 Method: GET Url: /api/v1/blockchai Date: 2024-05-08 Time: 18:17:58 Success: undefined - Message: ErrorResponse is not defined
 Method: GET Url: /api/v1/blockchai Date: 2024-05-08 Time: 18:19:40 Success: undefined - Message: ErrorResponse is not defined
 Method: GET Url: /api/v1/blockchai Date: 2024-05-08 Time: 18:20:38 Success: false - Message: Could not find the resource /api/v1/blockchai
+Method: GET Url: /api/v1/register-node Date: 2024-05-10 Time: 14:07:08 Success: false - Message: Could not find the resource /api/v1/register-node
+Method: GET Url: /api/v1/members/register-node Date: 2024-05-10 Time: 14:08:13 Success: false - Message: Could not find the resource /api/v1/members/register-node
+Method: GET Url: /api/v1/members/register-node Date: 2024-05-10 Time: 14:08:43 Success: false - Message: Could not find the resource /api/v1/members/register-node
+Method: GET Url: /api/v1/concensus Date: 2024-05-10 Time: 15:54:40 Success: false - Message: Could not find the resource /api/v1/concensus
+Method: GET Url: /api/v1/blockchain/consensus Date: 2024-05-10 Time: 15:57:39 Success: false - Message: Could not find the resource /api/v1/blockchain/consensus
+Method: POST Url: /api/v1/blockchain/block/broadcast Date: 2024-05-10 Time: 16:21:55 Success: false - Message: Could not find the resource /api/v1/blockchain/block/broadcast
+Method: POST Url: /api/v1/blockchain/block/broadcast Date: 2024-05-10 Time: 16:21:55 Success: false - Message: Could not find the resource /api/v1/blockchain/block/broadcast
+Method: POST Url: /api/v1/blockchain/block/broadcast Date: 2024-05-10 Time: 16:24:10 Success: false - Message: Could not find the resource /api/v1/blockchain/block/broadcast
+Method: POST Url: /api/v1/blockchain/block/broadcast Date: 2024-05-10 Time: 16:24:10 Success: false - Message: Could not find the resource /api/v1/blockchain/block/broadcast
+Method: POST Url: /api/v1/blockchain/block/broadcast Date: 2024-05-10 Time: 16:24:44 Success: false - Message: Could not find the resource /api/v1/blockchain/block/broadcast
+Method: POST Url: /api/v1/blockchain/block/broadcast Date: 2024-05-10 Time: 16:24:44 Success: false - Message: Could not find the resource /api/v1/blockchain/block/broadcast
+Method: POST Url: /api/v1/block/broadcast Date: 2024-05-10 Time: 18:43:12 Success: false - Message: Could not find the resource /api/v1/block/broadcast

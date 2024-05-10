@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import blockchainRoutes from './routes/blockchain-routes.js';
+import memberRouter from './routes/member-routes.js';
 import errorHandler from './middleware/errorHandler.js';
 import logger from './middleware/logger.js';
 import ErrorResponse from './utilities/ErrorResponse.js';
@@ -24,6 +25,7 @@ app.use(logger);
 
 // Routes
 app.use('/api/v1/blockchain', blockchainRoutes);
+app.use('/api/v1/members', memberRouter);
 
 // Catch all url...
 app.all('*', (req, res, next) => {

@@ -5,23 +5,25 @@ export default class Blockchain {
   constructor() {
     console.log('Difficulty level:', process.env.DIFFICULTY);
     this.chain = [];
+    this.memberNodes = [];
+    this.nodeUrl = process.argv[3];
     this.createBlock(Date.now(), '0', '0', [], process.env.DIFFICULTY);
   }
-
   createBlock(
     timestamp,
     previousBlockHash,
     currentBlockHash,
     data,
+    nonce,
     difficulty
   ) {
-
     const block = new Block(
       timestamp,
       this.chain.length + 1,
       previousBlockHash,
       currentBlockHash,
       data,
+      nonce,
       difficulty
     );
 
@@ -44,6 +46,27 @@ export default class Blockchain {
     const hash = createHash(stringToHash);
 
     return hash;
+  }
+
+  validateChain(blockchain) {
+    let isValid = true;
+
+    for (let i = 1; i < blockchain.length; i++) {
+      const block = blockchain[i];
+      const previousBlock = blockchain[i - 1];
+
+      const hash = this.hashBlock(
+        block.timestamp,
+        previousBlock.currentBlockHash,
+        block.data
+      );
+
+      if (hash !== block.currentBlockHash) isValid = false;
+      if (block.previousBlockHash !== previousBlock.currentBlockHash)
+        isValid = false;
+    }
+
+    return isValid;
   }
 
   proofOfWork(previousBlockHash, data) {
