@@ -10,7 +10,8 @@
     "node-1": "nodemon --env-file=config/.env server.js 3001 http://localhost:3001",
     "node-2": "nodemon --env-file=config/.env server.js 3002 http://localhost:3002",
     "node-3": "nodemon --env-file=config/.env server.js 3003 http://localhost:3003",
-    "debug": "ndb server"
+    "debug": "ndb server",
+    "test": "vitest"
   },
   "keywords": [],
   "author": "",
@@ -19,7 +20,7 @@
     "dotenv": "^16.4.5",
     "ndb": "^1.1.5",
     "nodemon": "^3.1.0",
-    "vitest": "^1.5.3"
+    "vitest": "^1.6.0"
   },
   "dependencies": {
     "cors": "^2.8.5",
