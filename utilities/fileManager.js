@@ -20,4 +20,14 @@ const writeFileAsync = async (folderName, fileName, data) => {
   }
 };
 
-export { writeFileSync, writeFileAsync };
+const readFileAsync = async (folderName, fileName) => {
+  try {
+    const filePath = path.join(__appdir, folderName, fileName);
+    const data = await readFile(filePath, 'utf8');
+    return data;
+  } catch (error) {
+    throw new Error(error.message);
+  }
+};
+
+export { writeFileSync, writeFileAsync, readFileAsync };

@@ -1,11 +1,14 @@
 import { blockchain } from '../startup.js';
 import ResponseModel from '../utilities/ResponseModel.js';
+import { writeBlockchainData, updateBlockchainData } from '../utilities/blockchainData.js';
 
-const getAllBlocks = (req, res, next) => {
+const getAllBlocks = async (req, res, next) => {
   res.status(200).json(new ResponseModel({ statusCode: 200, data: blockchain }));
-};
 
+}
 const createBlock = async (req, res, next) => {
+  await updateBlockchainData();
+
   const lastBlock = blockchain.getLastBlock();
   const data = req.body;
   const { nonce, difficulty, timestamp } = blockchain.proofOfWork(
@@ -39,6 +42,8 @@ const createBlock = async (req, res, next) => {
       },
     });
   });
+
+  await writeBlockchainData();
 
   res.status(201).json({
     success: true,
