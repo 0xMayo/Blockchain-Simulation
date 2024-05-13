@@ -43,5 +43,14 @@
     "data": {},
     "nonce": 40557,
     "difficulty": 4
+  },
+  {
+    "timestamp": 1715561373978,
+    "blockIndex": 6,
+    "previousBlockHash": "000025862d8b54674e331f525866bdb4fbd9e811b406e7207ff5980141622221",
+    "currentBlockHash": "0009f46927872cdc9c1fdc8df17e426c444ab5f74768873574bafc539835c0d6",
+    "data": {},
+    "nonce": 14734,
+    "difficulty": 3
   }
 ]

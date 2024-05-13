@@ -1,5 +1,6 @@
 import { blockchain } from '../startup.js';
 import ResponseModel from '../utilities/ResponseModel.js';
+import ErrorResponse from '../utilities/ErrorResponse.js';
 import { writeBlockchainData, updateBlockchainData } from '../utilities/blockchainData.js';
 
 const getAllBlocks = async (req, res, next) => {
@@ -46,10 +47,10 @@ const createBlock = async (req, res, next) => {
 
   await writeBlockchainData();
 
-  res.status(201).json({
+  res.status(201).json(new ResponseModel({
     success: true,
     data: { message: 'The block has been created and distributed', block },
-  });
+  }));
 };
 
 const broadcast = (req, res, next) => {
@@ -60,19 +61,19 @@ const broadcast = (req, res, next) => {
 
   if (hash && index) {
     blockchain.chain.push(block);
-    res.status(201).json({
+    res.status(201).json(new ResponseModel({
       success: true,
       statusCode: 201,
       data: { message: 'The block has been added and sent' },
-    });
+    }));
   } else {
     res
       .status(500)
-      .json({
+      .json(new ErrorResponse({
         success: false,
         statusCode: 500,
         data: { message: 'The block has been rejected' },
-      });
+      }));
   }
 };
 
@@ -102,11 +103,11 @@ const synchronizeChain = (req, res, next) => {
     }
   });
 
-  res.status(200).json({
+  res.status(200).json(new ResponseModel({
     success: true,
     statusCode: 200,
     data: { message: 'Sync has finished' },
-  });
+  }));
 };
 
 export { createBlock, getAllBlocks, synchronizeChain, broadcast };
