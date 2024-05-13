@@ -30,12 +30,12 @@ export const registerNode = (req, res, next) => {
   }
 };
 
-export const syncMembers = async (url) => {
+export const syncMembers = (url) => {
   const members = [...blockchain.memberNodes, blockchain.nodeUrl];
   try {
-    const fetchPromises = members.map(member => {
+    members.forEach(async (member) => {
       const body = { nodeUrl: member };
-      return fetch(`${url}/api/v1/members/register-node`, {
+      await fetch(`${url}/api/v1/members/register-node`, {
         method: 'POST',
         body: JSON.stringify(body),
         headers: {
@@ -43,9 +43,7 @@ export const syncMembers = async (url) => {
         },
       });
     });
-
-    await Promise.all(fetchPromises);
   } catch (error) {
-    console.error('Error syncing members:', error);
+    console.log('Error syncing members:', error);
   }
 };

@@ -1,6 +1,6 @@
 [
   {
-    "timestamp": 1715550194430,
+    "timestamp": 1715559373227,
     "blockIndex": 1,
     "previousBlockHash": "0",
     "currentBlockHash": "0",
@@ -8,27 +8,27 @@
     "difficulty": "2"
   },
   {
-    "timestamp": 1715550200308,
+    "timestamp": 1715559394124,
     "blockIndex": 2,
     "previousBlockHash": "0",
-    "currentBlockHash": "000a6c53a49d8b19d0df617a6c7c9f912113be651d8428cf5d88355529a11bb0",
+    "currentBlockHash": "0b5f0e472d56bcb587d4f6ce5ffcd5e8d5c34bb69301b6395124f21eb1e898f4",
     "data": {},
-    "difficulty": 3
+    "difficulty": 1
   },
   {
-    "timestamp": 1715550795680,
+    "timestamp": 1715559428420,
     "blockIndex": 3,
-    "previousBlockHash": "000a6c53a49d8b19d0df617a6c7c9f912113be651d8428cf5d88355529a11bb0",
-    "currentBlockHash": "00001acf5b0dce6a4b24eda979d1db1405bd488afa40cff889396a951675cf86",
+    "previousBlockHash": "0b5f0e472d56bcb587d4f6ce5ffcd5e8d5c34bb69301b6395124f21eb1e898f4",
+    "currentBlockHash": "b52bd6f16c6865ce87869918af0bcfa6ea42fc24c04d66575fb4e31f671f730e",
     "data": {},
-    "difficulty": 4
+    "difficulty": 2
   },
   {
-    "timestamp": 1715550827087,
+    "timestamp": 1715559468002,
     "blockIndex": 4,
-    "previousBlockHash": "00001acf5b0dce6a4b24eda979d1db1405bd488afa40cff889396a951675cf86",
-    "currentBlockHash": "000000bebf9c1db6d65c5a21a44b462a8296c7be6758766562e021c9714db753",
+    "previousBlockHash": "b52bd6f16c6865ce87869918af0bcfa6ea42fc24c04d66575fb4e31f671f730e",
+    "currentBlockHash": "0e60ff1f85536e8f7a25973086681dfcb51edd4d12497a9c1da74441e86de085",
     "data": {},
-    "difficulty": 5
+    "difficulty": 1
   }
 ]

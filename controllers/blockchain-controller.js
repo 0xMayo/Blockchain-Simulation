@@ -4,8 +4,8 @@ import { writeBlockchainData, updateBlockchainData } from '../utilities/blockcha
 
 const getAllBlocks = async (req, res, next) => {
   res.status(200).json(new ResponseModel({ statusCode: 200, data: blockchain }));
-
 }
+
 const createBlock = async (req, res, next) => {
   await updateBlockchainData();
 

@@ -16,23 +16,18 @@ const dirname = path.dirname(filename);
 
 global.__appdir = dirname;
 
-// Middlewares
 app.use(express.json());
 app.use(cors());
 
-// Logging all requests
 app.use(logger);
 
-// Routes
 app.use('/api/v1/blockchain', blockchainRoutes);
 app.use('/api/v1/members', memberRouter);
 
-// Catch all url...
 app.all('*', (req, res, next) => {
     next(new ErrorResponse(`Could not find the resource ${req.originalUrl}`, 404));
   });
 
-// Central error handler
 app.use(errorHandler);
 
 app.listen(PORT, () =>
