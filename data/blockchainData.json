@@ -1,34 +1,47 @@
 [
   {
-    "timestamp": 1715559373227,
+    "timestamp": 1715560932486,
     "blockIndex": 1,
     "previousBlockHash": "0",
     "currentBlockHash": "0",
     "data": [],
+    "nonce": 500,
     "difficulty": "2"
   },
   {
-    "timestamp": 1715559394124,
+    "timestamp": 1715560955207,
     "blockIndex": 2,
     "previousBlockHash": "0",
-    "currentBlockHash": "0b5f0e472d56bcb587d4f6ce5ffcd5e8d5c34bb69301b6395124f21eb1e898f4",
+    "currentBlockHash": "092db99aa08a491fcfe2bae26ea07a2992c1657115e9aae8bb89269a447d45ec",
     "data": {},
+    "nonce": 2,
     "difficulty": 1
   },
   {
-    "timestamp": 1715559428420,
+    "timestamp": 1715560955859,
     "blockIndex": 3,
-    "previousBlockHash": "0b5f0e472d56bcb587d4f6ce5ffcd5e8d5c34bb69301b6395124f21eb1e898f4",
-    "currentBlockHash": "b52bd6f16c6865ce87869918af0bcfa6ea42fc24c04d66575fb4e31f671f730e",
+    "previousBlockHash": "092db99aa08a491fcfe2bae26ea07a2992c1657115e9aae8bb89269a447d45ec",
+    "currentBlockHash": "0034712cbd3a8984b3ee567a9fc097913743cbcaf1371359d8ccdc8d0da2e595",
     "data": {},
+    "nonce": 271,
     "difficulty": 2
   },
   {
-    "timestamp": 1715559468002,
+    "timestamp": 1715560956543,
     "blockIndex": 4,
-    "previousBlockHash": "b52bd6f16c6865ce87869918af0bcfa6ea42fc24c04d66575fb4e31f671f730e",
-    "currentBlockHash": "0e60ff1f85536e8f7a25973086681dfcb51edd4d12497a9c1da74441e86de085",
+    "previousBlockHash": "0034712cbd3a8984b3ee567a9fc097913743cbcaf1371359d8ccdc8d0da2e595",
+    "currentBlockHash": "000ac9d25b2769eaff2c3c1c32f1c9888cbf1871cf5e50a032d72c0f8593d958",
     "data": {},
-    "difficulty": 1
+    "nonce": 5922,
+    "difficulty": 3
+  },
+  {
+    "timestamp": 1715560957324,
+    "blockIndex": 5,
+    "previousBlockHash": "000ac9d25b2769eaff2c3c1c32f1c9888cbf1871cf5e50a032d72c0f8593d958",
+    "currentBlockHash": "000025862d8b54674e331f525866bdb4fbd9e811b406e7207ff5980141622221",
+    "data": {},
+    "nonce": 40557,
+    "difficulty": 4
   }
 ]

@@ -5,6 +5,7 @@ export default class Block {
       previousBlockHash,
       currentBlockHash,
       data,
+      nonce,
       difficulty
     ) {
       this.timestamp = timestamp;
@@ -12,6 +13,7 @@ export default class Block {
       this.previousBlockHash = previousBlockHash;
       this.currentBlockHash = currentBlockHash;
       this.data = data;
+      this.nonce = nonce;
       this.difficulty = difficulty || +process.env.DIFFICULTY;
     }
   }

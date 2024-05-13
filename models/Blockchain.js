@@ -7,7 +7,7 @@ export default class Blockchain {
     this.chain = [];
     this.memberNodes = [];
     this.nodeUrl = process.argv[3];
-    this.createBlock(Date.now(), '0', '0', [], process.env.DIFFICULTY);
+    this.createBlock(Date.now(), '0', '0', [], 500, process.env.DIFFICULTY);
   }
   createBlock(
     timestamp,
@@ -58,7 +58,9 @@ export default class Blockchain {
       const hash = this.hashBlock(
         block.timestamp,
         previousBlock.currentBlockHash,
-        block.data
+        block.data,
+        block.nonce,
+        block.difficulty
       );
 
       if (hash !== block.currentBlockHash) isValid = false;

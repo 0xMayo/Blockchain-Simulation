@@ -29,6 +29,7 @@ const createBlock = async (req, res, next) => {
     lastBlock.currentBlockHash,
     currentBlockHash,
     data,
+    nonce,
     difficulty
   );
 
